@@ -6,6 +6,8 @@ let retreat = document.getElementById('retreat')
 let restart = document.getElementById('restart')
 let hp = document.getElementById('hpNumeric')
 let updatesBoard = document.getElementById('updateMsg')
+let enemyShip=document.getElementById('enemyShip')
+let myShipDisplay=document.getElementById('myShip')
 attack.disabled = true
 
 
@@ -133,6 +135,12 @@ function startGame() {
 attack.addEventListener('click', attackF)
 function attackF() {
     myship.attack(enemyarr[0])
+    enemyShip.style.backgroundColor='white'
+    enemyShip.style.transition='1000ms'
+    setTimeout(() => {
+        enemyShip.style.backgroundColor='red'
+    }, 500);
+
     if (enemyarr[0].hull <= 0) {
         updatePrint('enemy defeated!')
         console.log('enemy defeated!')
@@ -143,6 +151,13 @@ function attackF() {
         updatePrint('new enemy ship deployed')
     }
     else if (enemyarr[0].hull > 0) {
+
+        myShipDisplay.style.backgroundColor='red'
+        myShipDisplay.style.transition='1000ms'
+        setTimeout(() => {
+            myShipDisplay.style.backgroundColor='blue'
+        }, 500);
+
         enemyarr[0].attack(myship)
         hp.innerText = myship.hull
         takeDamage(enemyarr[0].firepower)
