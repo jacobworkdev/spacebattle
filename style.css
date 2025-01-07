@@ -1,0 +1,86 @@
+body{
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: url(https://plus.unsplash.com/premium_photo-1676607444703-92110b5faf7d?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+#hpCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttons{
+    padding: 5px;
+    border-radius: 10px;
+    color: rgb(53, 97, 64);
+    border: solid;
+}
+
+#buttons> button{
+    background-color: rgb(42, 117, 148);
+    border-radius: 20px;
+
+}
+
+#gamefield{
+    border-radius: 5%;
+    padding: 1rem;
+    display: flex;
+    margin: 5%;
+    background: url(https://plus.unsplash.com/premium_photo-1719528500415-f7d70d8fc9b1?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    width: 800px;
+    height: 600px;
+    border: solid rgb(0, 0, 0);
+
+}
+
+#updateMsg{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    background: black;
+    width: 400px;
+    height: 500px;
+    border: solid blueviolet;
+}
+#gameUpdate{
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* ---------------My test field for testing code first------------------ */
+
+
+#myShip, #enemyShip {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+/* Player ship position */
+#myShip {
+    bottom: 13%;
+    left: 40%;
+    background-color: blue;
+    color: white;
+}
+
+/* Enemy ship position */
+#enemyShip {
+    bottom: 65%;
+    left: 40%;
+    background-color: red;
+    color: white;
+}
